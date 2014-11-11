@@ -1,0 +1,9 @@
+name Small world
+size 10 15
+rock 2 2
+rock 3 6
+rock 9 10
+// sexample_critter.txt should be in the working directory
+critter src/console/example-critter.txt 5 2 3
+critter src/console/example-critter.txt 4 3 1
+critter src/console/example-critter.txt 4 4 2

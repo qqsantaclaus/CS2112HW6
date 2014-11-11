@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.canvas.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="594.0" prefWidth="710.0" style="-fx-background-color: antiquewhite;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="graph.Main">
+   <children>
+      <MenuBar id="menu" fx:id="mb" prefHeight="33.0" prefWidth="710.0" style="-fx-background-color: #8C7369;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <menus>
+          <Menu id="setup" fx:id="setup" mnemonicParsing="false" text="Set up">
+            <items>
+              <MenuItem id="new" fx:id="newWorld" mnemonicParsing="false" text="New World" />
+                  <MenuItem id="loadWorld" fx:id="loadWorld" mnemonicParsing="false" text="Load World Files" />
+                  <MenuItem id="loadCritter" fx:id="loadCritter" mnemonicParsing="false" text="Load Critter Files" />
+            </items>
+          </Menu>
+          <Menu id="advance" fx:id="advance" mnemonicParsing="false" text="Advance">
+            <items>
+                  <MenuItem id="advanceOnce" fx:id="advanceOnce" mnemonicParsing="false" text="Advance One Step" />
+              <MenuItem id="advanceRate" fx:id="rateMenu" mnemonicParsing="false" text="Set Advance Rate" />
+                  <MenuItem id="timeSteps" fx:id="timeSteps" mnemonicParsing="false" text="Set Time Steps" />
+            </items>
+          </Menu>
+          <Menu id="help1" fx:id="helpMenu" mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem id="help2" fx:id="help" mnemonicParsing="false" text="Help" />
+                  <MenuItem id="worldInfo" fx:id="print" mnemonicParsing="false" text="Print Wolrd Info" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <ToolBar id="toolbar" fx:id="tb" layoutX="518.0" layoutY="457.0" orientation="VERTICAL" prefHeight="76.0" prefWidth="172.0" style="-fx-background-color: white;" AnchorPane.bottomAnchor="61.0" AnchorPane.rightAnchor="20.0">
+        <items>
+            <TextField id="rate" fx:id="rate" prefHeight="25.0" prefWidth="61.0" promptText="Advance rate (time steps per second):" />
+            <TextField id="number" fx:id="steps" prefHeight="25.0" prefWidth="61.0" promptText="Advance time steps:" />
+        </items>
+      </ToolBar>
+    <Button id="advanceButton" fx:id="adv" alignment="CENTER" layoutX="518.0" layoutY="547.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="79.0" text="Advance" AnchorPane.bottomAnchor="21.0" AnchorPane.rightAnchor="113.0" />
+      <Button id="start" fx:id="start" alignment="CENTER" layoutX="604.0" layoutY="549.0" mnemonicParsing="false" text="Start/Stop" AnchorPane.bottomAnchor="22.0" AnchorPane.rightAnchor="19.0" />
+      <VBox id="information" fx:id="vb" layoutX="515.0" layoutY="54.0" prefHeight="383.0" prefWidth="172.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="54.0">
+         <children>
+            <Label id="worldInformation" prefHeight="96.0" prefWidth="217.0" text="Label" />
+            <Separator prefHeight="20.0" prefWidth="170.0" visible="false" />
+            <ScrollPane prefHeight="276.0" prefWidth="172.0">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="466.0" prefWidth="514.0">
+                     <children>
+                        <Label id="hexInformation" prefHeight="193.0" prefWidth="144.0" text="Label" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </ScrollPane>
+         </children>
+      </VBox>
+      <ScrollPane fx:id="sp" layoutX="20.0" layoutY="54.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="519.0" prefWidth="475.0" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="54.0" />
+   </children>
+   <rotationAxis>
+      <Point3D x="1.0" y="1.0" />
+   </rotationAxis>
+</AnchorPane>
